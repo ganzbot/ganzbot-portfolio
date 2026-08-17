@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>[Robot Name] — Build Log</title>
-<meta name="description" content="A build log of [Robot Name], a [one-line description of the robot].">
+<title>GanzBot Jr Jr — Portfolio</title>
+<meta name="description" content="GanzBot, a two-wheeled self balancing robot.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Condensed:wght@600;700&display=swap" rel="stylesheet">
@@ -12,12 +12,20 @@
 </head>
 <body>
 
+  <nav class="site-nav">
+    <a class="site-nav-brand" href="index.html">GanzBot Jr Jr</a>
+    <div class="site-nav-links">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="build-log.html">Build Log</a>
+    </div>
+  </nav>
+
   <header class="hero">
     <div class="hero-grid" aria-hidden="true"></div>
     <div class="hero-inner">
-      <p class="eyebrow">build log</p>
-      <h1 class="hero-title">[ROBOT NAME]</h1>
-      <p class="hero-sub">[One-sentence description — what it is and what makes it hard. e.g. "A two-wheeled self-balancing robot with brushless FOC motor control, built from a bare RP2350."]</p>
+      <p class="eyebrow">finished build</p>
+      <h1 class="hero-title">GanzBot Jr Jr</h1>
+      <p class="hero-sub">A two-wheeled self-balancing robot with brushless FOC motor control with realtime wifi data monitoring and motion control.</p>
       <div class="hero-meta">
         <span><span class="meta-label">Status</span> [In progress / Balancing / v2]</span>
         <span><span class="meta-label">Started</span> [Month Year]</span>
@@ -26,90 +34,66 @@
     </div>
   </header>
 
-  <main class="timeline" id="log">
+  <main class="showcase">
 
-    <!-- ============================================= -->
-    <!-- ENTRY TEMPLATE — copy this whole <section> block
-         for each new log entry, then edit the contents. -->
-    <!-- ============================================= -->
+    <section class="showcase-section">
+      <figure class="entry-figure">
+        <div class="img-placeholder showcase-hero-figure">[ INSERT HERO SHOT OF FINISHED ROBOT ]</div>
+        <figcaption>[Caption — e.g. "GanzBot Jr Jr, final assembly"]</figcaption>
+      </figure>
+    </section>
 
-    <section class="entry">
-      <div class="entry-rail" aria-hidden="true">
-        <span class="entry-node"></span>
-      </div>
-      <div class="entry-body">
-        <p class="entry-date">[Month DD, YYYY]</p>
-        <h2 class="entry-title">[Entry title — e.g. "First power-on"]</h2>
-
-        <div class="entry-text">
-          <p>[Paragraph one. What you set out to do in this stretch of work, and any context needed to understand it.]</p>
-          <p>[Paragraph two. What actually happened — including the parts that didn't work. A build log earns trust by including the debugging, not just the wins.]</p>
-        </div>
-
-        <figure class="entry-figure">
-          <div class="img-placeholder">[ INSERT IMAGE ]</div>
-          <figcaption>[Caption — what the image shows]</figcaption>
-        </figure>
-
-        <div class="entry-text">
-          <p>[Optional third paragraph — result, what you learned, or what's next.]</p>
-        </div>
+    <section class="showcase-section">
+      <p class="showcase-heading">Overview</p>
+      <div class="entry-text">
+        <p>[What the robot is and what it does, in a couple sentences aimed at someone seeing it for the first time. Save the play-by-play for the build log.]</p>
+        <p>[Optional second paragraph — the interesting engineering decision, the hardest problem solved, or what makes this build distinctive.]</p>
       </div>
     </section>
 
-    <section class="entry">
-      <div class="entry-rail" aria-hidden="true">
-        <span class="entry-node"></span>
-      </div>
-      <div class="entry-body">
-        <p class="entry-date">[Month DD, YYYY]</p>
-        <h2 class="entry-title">[Entry title]</h2>
-
-        <div class="entry-text">
-          <p>[Body text.]</p>
+    <section class="showcase-section">
+      <p class="showcase-heading">Specs</p>
+      <dl class="specs-grid">
+        <div>
+          <dt>Controller</dt>
+          <dd>[RP2350]</dd>
         </div>
+        <div>
+          <dt>Motor control</dt>
+          <dd>[Brushless FOC · SimpleFOC]</dd>
+        </div>
+        <div>
+          <dt>Sensors</dt>
+          <dd>[IMU model, encoders, etc.]</dd>
+        </div>
+        <div>
+          <dt>Connectivity</dt>
+          <dd>[Wi-Fi telemetry]</dd>
+        </div>
+        <div>
+          <dt>Power</dt>
+          <dd>[Battery spec]</dd>
+        </div>
+        <div>
+          <dt>Weight</dt>
+          <dd>[X.X kg]</dd>
+        </div>
+      </dl>
+    </section>
 
-        <figure class="entry-figure entry-figure-pair">
-          <div class="img-placeholder">[ INSERT IMAGE ]</div>
-          <div class="img-placeholder">[ INSERT IMAGE ]</div>
-        </figure>
-        <p class="pair-caption">[Caption spanning both images, if useful]</p>
+    <section class="showcase-section">
+      <p class="showcase-heading">Gallery</p>
+      <div class="gallery-grid">
+        <div class="img-placeholder">[ INSERT IMAGE ]</div>
+        <div class="img-placeholder">[ INSERT IMAGE ]</div>
+        <div class="img-placeholder">[ INSERT IMAGE ]</div>
       </div>
     </section>
 
-    <section class="entry">
-      <div class="entry-rail" aria-hidden="true">
-        <span class="entry-node"></span>
-      </div>
-      <div class="entry-body">
-        <p class="entry-date">[Month DD, YYYY]</p>
-        <h2 class="entry-title">[Entry title]</h2>
-
-        <div class="entry-text">
-          <p>[Body text.]</p>
-        </div>
-
-        <pre class="entry-code"><code>[Optional: a short code or terminal snippet.
-Delete this block if you don't need one.]</code></pre>
-
-        <div class="entry-text">
-          <p>[Closing paragraph.]</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== end of entry template — add more sections above this line ===== -->
-
-    <section class="entry entry-current">
-      <div class="entry-rail" aria-hidden="true">
-        <span class="entry-node entry-node-current"></span>
-      </div>
-      <div class="entry-body">
-        <p class="entry-date">Now</p>
-        <h2 class="entry-title">[Current status]</h2>
-        <div class="entry-text">
-          <p>[Where the project stands today, and what's still open. Update this section as the newest entry each time you add one above it — or move it down and add a fresh dated entry.]</p>
-        </div>
+    <section class="showcase-section">
+      <div class="showcase-cta">
+        <p>Curious how it got here? The build log covers the debugging, the dead ends, and the wins.</p>
+        <a class="cta-button" href="build-log.html">Read the build log →</a>
       </div>
     </section>
 
