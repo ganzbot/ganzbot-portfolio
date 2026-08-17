@@ -317,7 +317,6 @@ img.showcase-hero-figure {
 .entry-text p {
   margin: 0 0 1rem;
   color: var(--ink);
-  max-width: 62ch;
 }
 
 .entry-figure {
@@ -336,6 +335,18 @@ img.showcase-hero-figure {
   font-size: 0.8rem;
   color: var(--ink-soft);
   margin: 0 0 1rem;
+}
+
+.entry-figure img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.entry-figure .img-placeholder {
+  aspect-ratio: 5 / 4;
 }
 
 .img-placeholder {

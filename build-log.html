@@ -46,21 +46,45 @@
         <span class="entry-node"></span>
       </div>
       <div class="entry-body">
-        <p class="entry-date">[Month DD, YYYY]</p>
-        <h2 class="entry-title">[Entry title — e.g. "First power-on"]</h2>
+        <p class="entry-date">August 15, 2026</p>
+        <h2 class="entry-title">3D Printed Decal</h2>
 
         <div class="entry-text">
-          <p>[Paragraph one. What you set out to do in this stretch of work, and any context needed to understand it.]</p>
-          <p>[Paragraph two. What actually happened — including the parts that didn't work. A build log earns trust by including the debugging, not just the wins.]</p>
+          <p>The controller was feeling like it had a lot of dead space. Thankfully, with minimal effort in Fusion I was able to insert an image of GanzBot and trace some key features.</p>
+          <p>Thanks to the ease of the AMS on my Bambu A1, this flush detail was easy to get right and makes the controller's purpose unmistakable.</p>
         </div>
 
         <figure class="entry-figure">
-          <div class="img-placeholder">[ INSERT IMAGE ]</div>
-          <figcaption>[Caption — what the image shows]</figcaption>
+          <img src="images/controller_decal.JPEG" alt="Decal of GanzBot on his controller"
+          <figcaption>Sick Decal</figcaption>
         </figure>
 
         <div class="entry-text">
-          <p>[Optional third paragraph — result, what you learned, or what's next.]</p>
+          <p>While not super necessary, this was actually the second print of the shell after a few dimensions were changed for the cutouts of the power switch and screen.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="entry">
+      <div class="entry-rail" aria-hidden="true">
+        <span class="entry-node"></span>
+      </div>
+      <div class="entry-body">
+        <p class="entry-date">August 16, 2026</p>
+        <h2 class="entry-title">Internal Controller Wiring + Batteries</h2>
+
+        <div class="entry-text">
+          <p>With code tested and the housing close to being ready to close up, the last part of the process was to add a battery pack and clean up all the wiring.</p>
+          <p>A standard 4 slot AA battery pack was used, and the fourth slot was just shorted by soldering a wire across it. This deliverys ~4.5V (1.5 per battery), which is within operating limits of the pico 2.</p>
+        </div>
+
+        <figure class="entry-figure">
+          <img src="images/controller_wiring.JPEG" alt="internal wiring of controller"
+          <figcaption>Battery pack installed</figcaption>
+        </figure>
+
+        <div class="entry-text">
+          <p>The extra length in the wires allow for easy access the all internal components when removing the outer screws for maintenance. Next up is figuring out what to do with these buttons.</p>
         </div>
       </div>
     </section>
