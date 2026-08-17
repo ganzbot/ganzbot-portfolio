@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[Robot Name] — Build Log</title>
+<meta name="description" content="A build log of [Robot Name], a [one-line description of the robot].">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="eyebrow">build log</p>
+      <h1 class="hero-title">[ROBOT NAME]</h1>
+      <p class="hero-sub">[One-sentence description — what it is and what makes it hard. e.g. "A two-wheeled self-balancing robot with brushless FOC motor control, built from a bare RP2350."]</p>
+      <div class="hero-meta">
+        <span><span class="meta-label">Status</span> [In progress / Balancing / v2]</span>
+        <span><span class="meta-label">Started</span> [Month Year]</span>
+        <span><span class="meta-label">Stack</span> [RP2350 · SimpleFOC · C++]</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="timeline" id="log">
+
+    <!-- ============================================= -->
+    <!-- ENTRY TEMPLATE — copy this whole <section> block
+         for each new log entry, then edit the contents. -->
+    <!-- ============================================= -->
+
+    <section class="entry">
+      <div class="entry-rail" aria-hidden="true">
+        <span class="entry-node"></span>
+      </div>
+      <div class="entry-body">
+        <p class="entry-date">[Month DD, YYYY]</p>
+        <h2 class="entry-title">[Entry title — e.g. "First power-on"]</h2>
+
+        <div class="entry-text">
+          <p>[Paragraph one. What you set out to do in this stretch of work, and any context needed to understand it.]</p>
+          <p>[Paragraph two. What actually happened — including the parts that didn't work. A build log earns trust by including the debugging, not just the wins.]</p>
+        </div>
+
+        <figure class="entry-figure">
+          <div class="img-placeholder">[ INSERT IMAGE ]</div>
+          <figcaption>[Caption — what the image shows]</figcaption>
+        </figure>
+
+        <div class="entry-text">
+          <p>[Optional third paragraph — result, what you learned, or what's next.]</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="entry">
+      <div class="entry-rail" aria-hidden="true">
+        <span class="entry-node"></span>
+      </div>
+      <div class="entry-body">
+        <p class="entry-date">[Month DD, YYYY]</p>
+        <h2 class="entry-title">[Entry title]</h2>
+
+        <div class="entry-text">
+          <p>[Body text.]</p>
+        </div>
+
+        <figure class="entry-figure entry-figure-pair">
+          <div class="img-placeholder">[ INSERT IMAGE ]</div>
+          <div class="img-placeholder">[ INSERT IMAGE ]</div>
+        </figure>
+        <p class="pair-caption">[Caption spanning both images, if useful]</p>
+      </div>
+    </section>
+
+    <section class="entry">
+      <div class="entry-rail" aria-hidden="true">
+        <span class="entry-node"></span>
+      </div>
+      <div class="entry-body">
+        <p class="entry-date">[Month DD, YYYY]</p>
+        <h2 class="entry-title">[Entry title]</h2>
+
+        <div class="entry-text">
+          <p>[Body text.]</p>
+        </div>
+
+        <pre class="entry-code"><code>[Optional: a short code or terminal snippet.
+Delete this block if you don't need one.]</code></pre>
+
+        <div class="entry-text">
+          <p>[Closing paragraph.]</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== end of entry template — add more sections above this line ===== -->
+
+    <section class="entry entry-current">
+      <div class="entry-rail" aria-hidden="true">
+        <span class="entry-node entry-node-current"></span>
+      </div>
+      <div class="entry-body">
+        <p class="entry-date">Now</p>
+        <h2 class="entry-title">[Current status]</h2>
+        <div class="entry-text">
+          <p>[Where the project stands today, and what's still open. Update this section as the newest entry each time you add one above it — or move it down and add a fresh dated entry.]</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>[Your Name] · <a href="https://github.com/[yourusername]">GitHub</a> · <a href="mailto:you@email.com">Contact</a></p>
+  </footer>
+</body>
+</html>
