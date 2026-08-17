@@ -20,16 +20,16 @@
     </div>
   </nav>
 
-  <header class="hero">
+  <header class="hero hero-home">
     <div class="hero-grid" aria-hidden="true"></div>
     <div class="hero-inner">
-      <p class="eyebrow">finished build</p>
+      <p class="eyebrow eyebrow-home">finished build</p>
       <h1 class="hero-title">GanzBot Jr Jr</h1>
       <p class="hero-sub">A two-wheeled self-balancing robot with brushless FOC motor control with realtime wifi data monitoring and motion control.</p>
       <div class="hero-meta">
-        <span><span class="meta-label">Status</span> [In progress / Balancing / v2]</span>
-        <span><span class="meta-label">Started</span> [Month Year]</span>
-        <span><span class="meta-label">Stack</span> [RP2350 · SimpleFOC · C++]</span>
+        <span><span class="meta-label">Started</span> June 2026</span>
+        <span><span class="meta-label">Finished</span> August 2026</span>
+        <span><span class="meta-label">Stack</span> RP2350 · SimpleFOC · C++</span>
       </div>
     </div>
   </header>
@@ -37,17 +37,26 @@
   <main class="showcase">
 
     <section class="showcase-section">
+      <p class="showcase-heading">Demo</p>
       <figure class="entry-figure">
-        <img src="images/robot_and_controller.JPEG" alt="[Robot Name] and the wireless controller, finished build" class="showcase-hero-figure">
-        <figcaption>[Caption — e.g. "GanzBot Jr Jr, final assembly"]</figcaption>
+        <video src="images/demo.mp4" class="showcase-hero-figure" controls preload="metadata" poster="images/robot_and_controller.JPEG" playsinline>
+          Your browser doesn't support embedded video. <a href="images/demo.mp4">Download the video</a> instead.
+        </video>
+        <figcaption>Powerup + calibration</figcaption>
+      </figure>
+      <figure class="entry-figure">
+        <video src="images/data.mp4#t=0.1" class="showcase-hero-figure" controls preload="metadata" playsinline>
+          Your browser doesn't support embedded video. <a href="images/data.mp4">Download the video</a> instead.
+        </video>
+        <figcaption>Data Acquisition and WiFi Telemetry</figcaption>
       </figure>
     </section>
 
     <section class="showcase-section">
       <p class="showcase-heading">Overview</p>
       <div class="entry-text">
-        <p>[What the robot is and what it does, in a couple sentences aimed at someone seeing it for the first time. Save the play-by-play for the build log.]</p>
-        <p>[Optional second paragraph — the interesting engineering decision, the hardest problem solved, or what makes this build distinctive.]</p>
+        <p>GanzBot is a self-balancing robot utilizing WiFi connections to multiple devices. Unlike many robots of its kind using DC or stepper motors, GanzBot uses two brushless DC motors commanded using Field-Oriented Control (FOC). This allows for smooth and low-noise torque control at low speeds.</p>
+        <p>Sensing and control run on a dual-core RP2350, with the two cores split so the FOC current loop isn't fighting IMU polling and WiFi telemetry for CPU time. Like many self-balancing robot, GanzBot utilizes a cascaded control loop. The inner is running at 200Hz, keeping it upright based on the output of the custom complementary filter calculated on raw IMU data. The outer is keeping the velocity at its desired rate, whether that means staying in place or following a commanded linear velocity.</p>
       </div>
     </section>
 
@@ -103,10 +112,98 @@
       </div>
     </section>
 
+    <section class="showcase-section">
+      <p class="showcase-heading">Bill of Materials</p>
+
+      <p class="bom-group-heading">Robot</p>
+      <div class="bom-table-wrap">
+        <table class="bom-table">
+          <thead>
+            <tr>
+              <th>Part</th>
+              <th>Qty</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pico 2W</td>
+              <td>1</td>
+              <td>Adafruit</td>
+            </tr>
+            <tr>
+              <td>BLDC motor w/ MT6701</td>
+              <td>2</td>
+              <td>Amazon</td>
+            </tr>
+            <tr>
+              <td>BLDC Motor Controller Board</td>
+              <td>2</td>
+              <td>eBay</td>
+            </tr>
+            <tr>
+              <td>BNO055 IMU</td>
+              <td>1</td>
+              <td>DFRobot</td>
+            </tr>
+            <tr>
+              <td>Kobalt 24V 2Ah Li-ion battery</td>
+              <td>1</td>
+              <td>Lowe's</td>
+            </tr>
+            <tr>
+              <td>Power Wheels Battery Adapater</td>
+              <td>1</td>
+              <td>Amazon</td>
+            </tr>
+            <tr>
+              <td>5V 3.2A Step-Down Voltage Regulator</td>
+              <td>1</td>
+              <td>Polulu</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="bom-group-heading">Controller</p>
+      <div class="bom-table-wrap">
+        <table class="bom-table">
+          <thead>
+            <tr>
+              <th>Part</th>
+              <th>Qty</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pico 2W</td>
+              <td>1</td>
+              <td>Adafruit</td>
+            </tr>
+            <tr>
+              <td>TFT Display</td>
+              <td>1</td>
+              <td>Purdue ECE 362 Kit</td>
+            </tr>
+            <tr>
+              <td>AA 4 Battery Holder</td>
+              <td>1</td>
+              <td>Amazon</td>
+            </tr>
+            <tr>
+              <td>Joystick</td>
+              <td>1</td>
+              <td>Old RC Transmitter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
-    <p>[Your Name] · <a href="https://github.com/[yourusername]">GitHub</a> · <a href="mailto:you@email.com">Contact</a></p>
+    <p>Alex Gansler · <a href="https://github.com/ganzbot">GitHub</a> · <a href="agansle@purdue.edu">Contact</a></p>
   </footer>
 </body>
 </html>

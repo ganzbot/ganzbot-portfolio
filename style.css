@@ -94,6 +94,21 @@ a:focus-visible, button:focus-visible {
   mask-image: linear-gradient(to bottom, black, transparent 85%);
 }
 
+.hero-log .hero-grid {
+  background-image: repeating-linear-gradient(
+    180deg,
+    var(--paper-line) 0,
+    var(--paper-line) 1px,
+    transparent 1px,
+    transparent 36px
+  );
+  background-size: auto;
+}
+
+.hero-log {
+  border-bottom-color: var(--copper);
+}
+
 .hero-inner {
   position: relative;
   max-width: 900px;
@@ -101,12 +116,38 @@ a:focus-visible, button:focus-visible {
 }
 
 .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55em;
   font-family: var(--font-mono);
   font-size: 0.78rem;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
+  padding: 0.35em 0.9em;
+  border-radius: 999px;
+  margin: 0 0 1.1rem;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.eyebrow-home {
   color: var(--copper-strong);
-  margin: 0 0 0.9rem;
+  background: var(--copper-tint);
+}
+
+.eyebrow-log {
+  color: var(--ink);
+  background: var(--paper-line);
+}
+
+.eyebrow-log::before {
+  border-radius: 2px;
 }
 
 .hero-title {
@@ -167,13 +208,12 @@ a:focus-visible, button:focus-visible {
   margin: 0 0 1.4rem;
 }
 
-.showcase-section .entry-text p { max-width: 68ch; }
-
 .img-placeholder.showcase-hero-figure {
   aspect-ratio: 16 / 9;
 }
 
-img.showcase-hero-figure {
+img.showcase-hero-figure,
+video.showcase-hero-figure {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -203,6 +243,51 @@ img.showcase-hero-figure {
   margin: 0;
   font-size: 1.02rem;
   color: var(--ink);
+}
+
+.bom-group-heading {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 0.7rem;
+}
+
+.bom-group-heading:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.bom-table-wrap {
+  overflow-x: auto;
+}
+
+.bom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bom-table th {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-align: left;
+  padding: 0 1rem 0.6rem 0;
+  border-bottom: 1px solid var(--paper-line);
+  white-space: nowrap;
+}
+
+.bom-table td {
+  padding: 0.7rem 1rem 0.7rem 0;
+  border-bottom: 1px solid var(--paper-line);
+  color: var(--ink);
+  font-size: 0.98rem;
+}
+
+.bom-table tr:last-child td {
+  border-bottom: none;
 }
 
 .gallery-grid {
