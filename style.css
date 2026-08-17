@@ -173,6 +173,14 @@ a:focus-visible, button:focus-visible {
   aspect-ratio: 16 / 9;
 }
 
+img.showcase-hero-figure {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
 .specs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
