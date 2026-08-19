@@ -41,6 +41,7 @@
          for each new log entry, then edit the contents. -->
     <!-- ============================================= -->
 
+<!-- foundation -->
     <section class="entry">
       <div class="entry-rail" aria-hidden="true">
         <span class="entry-node"></span>
@@ -58,9 +59,64 @@
           <img src="images/beams.JPEG" alt="Support beams for upper level">
         </figure>
         <p class="pair-caption">Building process of chassis</p>
+
+        <div class="entry-text">
+          <p>Also pictured here are the 3D printed wheels and treads made. The wheel is PLA, but the custom treads are TPU. After little testing, these were determined to be too slippy and real rubber treads were then ordered.</p>
+        </div>
+
       </div>
     </section>
 
+<!-- Installing first electronics -->
+    <section class="entry">
+      <div class="entry-rail" aria-hidden="true">
+        <span class="entry-node"></span>
+      </div>
+      <div class="entry-body">
+        <p class="entry-date">June 8, 2026</p>
+        <h2 class="entry-title">Installing first electronics</h2>
+
+        <div class="entry-text">
+          <p>With the chassis starting to take form, I started to think about where everything would fit on the inside. To start out, a 3D printed "mesa" was made to mount a large breadboard.</p>
+          <p>This allowed the IMU to be mounted flat along with make the connections back the the microcontroller.</p>
+        </div>
+
+        <figure class="entry-figure">
+          <img src="images/mesa.JPEG" alt="breadboard on robot with pico 2 and imu">
+          <figcaption>Breadboard mounted</figcaption>
+        </figure>
+      </div>
+    </section>
+
+<!-- LVCO -->
+    <section class="entry">
+      <div class="entry-rail" aria-hidden="true">
+        <span class="entry-node"></span>
+      </div>
+      <div class="entry-body">
+        <p class="entry-date">June 12, 2026</p>
+        <h2 class="entry-title">Low Voltage Cutoff</h2>
+
+        <div class="entry-text">
+          <p>Without knowing many characteristics of the battery, safety was one of the highest priorities before using it on the robot. In addition to a 5 Amp fuse and power switch, this low voltage cutoff circuitry provides safety the battery itself. Split onto two boards, they share 24V, GND, and Signal. The first board has a 5V voltage regulator, a comparator, and flip flop. It outputs a high signal when there is a voltage input greater than 24V. </p>
+          <p>The signal from the first board is taken by the second board and drives a transistor to activate a relay and indicator LED. When the supply voltage falls under 18.5V, the signal latches low and cannot go high again without restart.</p>
+        </div>
+
+        <figure class="entry-figure entry-figure-pair">
+          <img src="images/perf.JPEG" alt="2 perf boards">
+          <img src="images/perf_mounted.JPEG" alt="2 perf boards mounted on either side of the battery">
+        </figure>
+        <p class="pair-caption">LVCO boards</p>
+
+        <div class="entry-text">
+          <p>This design does not use any hysteris, which would have been possible, but from a safety standpoint if the battery drops below 18.5V, the desired logic is to not allow any more power distribution at all.</p>
+          <p>The boards were then mounted on either side of the battery with more M3 screws and heatset inserts, with their connecting harness bridging over the battery.</p>
+        </div>
+
+      </div>
+    </section>
+
+<!-- getting a head -->
     <section class="entry">
       <div class="entry-rail" aria-hidden="true">
         <span class="entry-node"></span>
@@ -80,7 +136,45 @@
         <p class="pair-caption">Building process of head</p>
       </div>
     </section>
-    
+
+<!-- animation functions -->
+    <section class="entry">
+      <div class="entry-rail" aria-hidden="true">
+        <span class="entry-node"></span>
+      </div>
+      <div class="entry-body">
+        <p class="entry-date">August 7, 2026</p>
+        <h2 class="entry-title">Animation functions</h2>
+
+        <div class="entry-text">
+          <p>[Body text.]</p>
+        </div>
+
+        <pre class="entry-code"><code>// underglow
+void led_tilt(Adafruit_NeoPixel &strip, float err_deg);
+void underglow_rainbow(Adafruit_NeoPixel &strip, unsigned long now_ms, uint16_t period_ms);
+void underglow_split(Adafruit_NeoPixel &strip);
+
+// eyes
+void eye_swirl(Adafruit_NeoPixel &strip, unsigned long now_ms, uint16_t period_ms);
+void eye_breathe(Adafruit_NeoPixel &strip, unsigned long now_ms, uint16_t period_ms);
+void eye_evil(Adafruit_NeoPixel &strip);
+
+// mouth
+void mouth_breathe(Adafruit_NeoPixel &strip, unsigned long now_ms, uint16_t period_ms);
+void mouth_bounce(Adafruit_NeoPixel &strip, unsigned long now_ms, uint16_t step_ms);
+void mouth_scan(Adafruit_NeoPixel &strip, unsigned long now_ms, uint16_t step_ms);
+
+// misc
+void fallen(Adafruit_NeoPixel &strip, unsigned long now_ms, uint16_t period_ms);</code></pre>
+
+        <div class="entry-text">
+          <p>[Closing paragraph.]</p>
+        </div>
+      </div>
+    </section>
+
+<!-- 3D printed decal -->
     <section class="entry">
       <div class="entry-rail" aria-hidden="true">
         <span class="entry-node"></span>
@@ -105,6 +199,7 @@
       </div>
     </section>
 
+<!-- internal controller wiring + batteries -->
     <section class="entry">
       <div class="entry-rail" aria-hidden="true">
         <span class="entry-node"></span>
@@ -129,48 +224,7 @@
       </div>
     </section>
 
-    <section class="entry">
-      <div class="entry-rail" aria-hidden="true">
-        <span class="entry-node"></span>
-      </div>
-      <div class="entry-body">
-        <p class="entry-date">[Month DD, YYYY]</p>
-        <h2 class="entry-title">[Entry title]</h2>
-
-        <div class="entry-text">
-          <p>[Body text.]</p>
-        </div>
-
-        <figure class="entry-figure entry-figure-pair">
-          <div class="img-placeholder">[ INSERT IMAGE ]</div>
-          <div class="img-placeholder">[ INSERT IMAGE ]</div>
-        </figure>
-        <p class="pair-caption">[Caption spanning both images, if useful]</p>
-      </div>
-    </section>
-
-    <section class="entry">
-      <div class="entry-rail" aria-hidden="true">
-        <span class="entry-node"></span>
-      </div>
-      <div class="entry-body">
-        <p class="entry-date">[Month DD, YYYY]</p>
-        <h2 class="entry-title">[Entry title]</h2>
-
-        <div class="entry-text">
-          <p>[Body text.]</p>
-        </div>
-
-        <pre class="entry-code"><code>[Optional: a short code or terminal snippet.
-Delete this block if you don't need one.]</code></pre>
-
-        <div class="entry-text">
-          <p>[Closing paragraph.]</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== end of entry template — add more sections above this line ===== -->
+<!-- ===== end of entry template — add more sections above this line ===== -->
 
     <section class="entry entry-current">
       <div class="entry-rail" aria-hidden="true">
@@ -178,9 +232,9 @@ Delete this block if you don't need one.]</code></pre>
       </div>
       <div class="entry-body">
         <p class="entry-date">Now</p>
-        <h2 class="entry-title">[Current status]</h2>
+        <h2 class="entry-title">Finishing Touches + Future Plans</h2>
         <div class="entry-text">
-          <p>[Where the project stands today, and what's still open. Update this section as the newest entry each time you add one above it — or move it down and add a fresh dated entry.]</p>
+          <p>Working on functions for the macro buttons on the controller, adding more screens, sending data to controller?</p>
         </div>
       </div>
     </section>
